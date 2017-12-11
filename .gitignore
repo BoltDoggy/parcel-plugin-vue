@@ -1,0 +1,13 @@
+.cache
+dist
+#examples
+node_modules
+#test
+#.gitignore
+#index.js
+#MyAssets.js
+#MyPackager.js
+#package-lock.json
+#package.json
+#README.md
+*.log

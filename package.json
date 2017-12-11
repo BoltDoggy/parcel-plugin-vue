@@ -1,0 +1,27 @@
+{
+  "name": "parcel-plugin-vue",
+  "version": "0.0.1-alpha.1",
+  "description": "还在开发中",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lc60005457/parcel-plugin-vue.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lc60005457/parcel-plugin-vue/issues"
+  },
+  "homepage": "https://github.com/lc60005457/parcel-plugin-vue#readme",
+  "dependencies": {
+    "bunyan": "^1.8.12",
+    "parcel-bundler": "^1.1.0",
+    "vue": "^2.5.9",
+    "vue-hot-reload-api": "^2.2.4",
+    "vueify": "^9.4.1"
+  },
+  "devDependencies": {}
+}
