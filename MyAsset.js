@@ -43,28 +43,27 @@ class MyAsset extends Asset {
     }
 
     collectDependencies() {
-        // analyze dependencies
         ownDebugger('collectDependencies');
 
+        // analyze dependencies
         this.addDependency('vue');
         this.addDependency('vue-hot-reload-api');
     }
 
     async transform() {
-        // optional. transform after collecting dependencies.
         ownDebugger('transform');
 
+        // optional. transform after collecting dependencies.
         this.ast.cjs = await compilerPromise(this.contents);
     }
 
     generate() {
-        // code generate. you can return multiple renditions if needed.
-        // results are passed to the appropriate packagers to generate final bundles.
         ownDebugger('generate');
 
+        // code generate. you can return multiple renditions if needed.
+        // results are passed to the appropriate packagers to generate final bundles.
         return {
-            // vue: 'this.contents', // main output
-            html: 'asdf',
+            // vue: this.contents, // main output
             js: this.ast.cjs // alternative rendition to be placed in JS bundle if needed
         };
     }
