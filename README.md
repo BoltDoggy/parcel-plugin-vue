@@ -1,4 +1,4 @@
-![parcel-plugin-vue](http://img.souche.com/f2e/b1f71b545619350ff92458bbcfa01056.png)
+<img src="https://img.souche.com/f2e/b1f71b545619350ff92458bbcfa01056.png" align="right" width="70">
 
 # parcel-plugin-vue
 
