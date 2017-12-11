@@ -1,35 +1,22 @@
-const Bunyan = require('bunyan');
 const { Packager } = require('parcel-bundler');
 
-const logger = Bunyan.createLogger({
-    name: `MyPackager`,
-    streams: [
-        {
-            path: `${__dirname}/MyPackager.log`,
-        },
-        {
-            stream: process.stdout
-        }
-    ]
-});
-
-logger.info('MyPackager');
+console.log('MyPackager');
 class MyPackager extends Packager {
     async start() {
         // optional. write file header if needed.
-        logger.info('start');
+        console.log('start');
         await this.dest.write(header);
     }
 
     async addAsset(asset) {
         // required. write the asset to the output file.
-        logger.info('addAsset');
+        console.log('addAsset');
         await this.dest.write(asset.generated.foo);
     }
 
     async end() {
         // optional. write file trailer if needed.
-        logger.info('end');
+        console.log('end');
         await this.dest.end(trailer);
     }
 }

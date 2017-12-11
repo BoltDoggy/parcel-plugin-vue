@@ -1,3 +1,3 @@
 <template>
-    <div>asf</div>
+    <div>Hello World!</div>
 </template>

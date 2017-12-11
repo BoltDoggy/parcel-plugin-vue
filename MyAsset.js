@@ -1,20 +1,8 @@
-const Bunyan = require('bunyan');
+const Debug = require('debug');
 const { Asset } = require('parcel-bundler');
 const { compiler } = require('vueify');
 
-const dev = process.env.NODE_ENV === 'development';
-
-const logger = Bunyan.createLogger({
-    name: `MyAsset`,
-    streams: dev ? [
-        {
-            path: `${__dirname}/MyAsset.log`,
-        },
-        {
-            stream: process.stdout
-        }
-    ] : []
-});
+let ownDebugger = Debug('parcel-plugin-vue:MyAsset');
 
 function compilerPromise(fileContent, filePath) {
     return new Promise((resolve, reject) => {
@@ -29,47 +17,55 @@ function compilerPromise(fileContent, filePath) {
     });
 }
 
-logger.info('MyAsset');
+ownDebugger('MyAsset');
+
 class MyAsset extends Asset {
     // type = 'vue'; // set the main output type.
-    // constructor(...args) {
-    //     // ...
-    //     logger.info('constructor');
-    //     super(...args);
-    //     this.type = 'vue';
-    // }
+    constructor(...args) {
+        ownDebugger('constructor');
 
-    async parse(code) {
-        logger.info('parse');
+        // ...
+        super(...args);
+        this.type = 'js';
+    }
+
+    parse(code) {
+        ownDebugger('parse');
+
         // parse code to an AST
-        return await compilerPromise(code);
+        return {};
     }
 
     pretransform() {
-        logger.info('pretransform');
+        ownDebugger('pretransform');
+
         // optional. transform prior to collecting dependencies.
     }
 
     collectDependencies() {
         // analyze dependencies
-        logger.info('collectDependencies');
+        ownDebugger('collectDependencies');
+
         this.addDependency('vue');
         this.addDependency('vue-hot-reload-api');
     }
 
-    transform() {
+    async transform() {
         // optional. transform after collecting dependencies.
-        logger.info('transform');
+        ownDebugger('transform');
+
+        this.ast.cjs = await compilerPromise(this.contents);
     }
 
     generate() {
         // code generate. you can return multiple renditions if needed.
         // results are passed to the appropriate packagers to generate final bundles.
-        logger.info('generate');
+        ownDebugger('generate');
 
         return {
-            vue: this.contents, // main output
-            js: this.ast // alternative rendition to be placed in JS bundle if needed
+            // vue: 'this.contents', // main output
+            html: 'asdf',
+            js: this.ast.cjs // alternative rendition to be placed in JS bundle if needed
         };
     }
 }

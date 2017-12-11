@@ -1,6 +1,6 @@
 const Bundler = require('parcel-bundler');
 
-let bundler = new Bundler('./examples/index.js');
+let bundler = new Bundler('./examples/index.html');
 bundler.addAssetType('.vue', require.resolve('../MyAsset'));
 
-console.log(bundler.bundle());
+bundler.bundle();

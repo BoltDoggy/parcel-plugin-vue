@@ -4,7 +4,7 @@
   "description": "parcel plugin for vue",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "rm -rf .cache && rm -rf dist && DEBUG=\"parcel-plugin-vue:*\" node test/index.js"
   },
   "repository": {
     "type": "git",
@@ -17,11 +17,12 @@
   },
   "homepage": "https://github.com/lc60005457/parcel-plugin-vue#readme",
   "dependencies": {
-    "bunyan": "^1.8.12",
     "parcel-bundler": "^1.1.0",
     "vue": "^2.5.9",
     "vue-hot-reload-api": "^2.2.4",
     "vueify": "^9.4.1"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "debug": "^3.1.0"
+  }
 }
