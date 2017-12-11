@@ -1,7 +1,7 @@
 {
   "name": "parcel-plugin-vue",
-  "version": "0.0.1-alpha.1",
-  "description": "还在开发中",
+  "version": "0.1.0",
+  "description": "parcel plugin for vue",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
