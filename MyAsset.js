@@ -47,6 +47,7 @@ class MyAsset extends Asset {
 
         // analyze dependencies
         this.addDependency('vue');
+        this.addDependency('vueify/lib/insert-css');
         this.addDependency('vue-hot-reload-api');
     }
 
@@ -54,7 +55,7 @@ class MyAsset extends Asset {
         ownDebugger('transform');
 
         // optional. transform after collecting dependencies.
-        this.ast.cjs = await compilerPromise(this.contents);
+        this.ast.cjs = await compilerPromise(this.contents, this.name);
     }
 
     generate() {
