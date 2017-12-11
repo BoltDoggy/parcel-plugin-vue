@@ -48,7 +48,10 @@ class MyAsset extends Asset {
         // analyze dependencies
         this.addDependency('vue');
         this.addDependency('vueify/lib/insert-css');
-        this.addDependency('vue-hot-reload-api');
+
+        if (process.env.NODE_ENV !== 'production') {
+            this.addDependency('vue-hot-reload-api');
+        }
     }
 
     async transform() {
