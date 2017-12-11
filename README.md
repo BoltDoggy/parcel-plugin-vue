@@ -1,6 +1,10 @@
+
+
 # parcel-plugin-vue
 
 > Stability: 1 - Experimental This feature is still under active development and subject to non-backwards compatible changes, or even removal, in any future version. Use of the feature is not recommended in production environments.
+
+<img src="https://img.souche.com/f2e/b1f71b545619350ff92458bbcfa01056.png" align="right" width="140">
 
 ## Using Plugins
 
