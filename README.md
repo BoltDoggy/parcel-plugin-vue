@@ -12,6 +12,8 @@
 
 > Using plugins in Parcel could not be any simpler. All you need to do is install them and save in your package.json. Plugins should be named with the prefix parcel-plugin-, e.g. parcel-plugin-foo. Any dependencies listed in package.json with this prefix will be automatically loaded during initialization.
 
+You must `node >= 8`
+
 ```
 npm i parcel-plugin-vue -D
 ```
