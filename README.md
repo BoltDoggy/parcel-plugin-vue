@@ -8,7 +8,7 @@
 
 __Make Parcel surport Vue single file components.__
 
-[【What's the Parcel】](https://parceljs.org/)[【What's the Vue】](https://vuejs.org/) [What's the Vue single file components](https://vuejs.org/v2/guide/single-file-components.html)
+[【What's the Parcel】](https://parceljs.org/)[【What's the Vue】](https://vuejs.org/)[【What's the Vue single file components】](https://vuejs.org/v2/guide/single-file-components.html)
 
 ## Using Plugin
 
