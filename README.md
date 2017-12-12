@@ -53,7 +53,7 @@ __or We recommend more__:
 import Vue from 'vue';
 import YourVue from 'YourVue.vue';
 
-const app = new Vue(Index);
+const app = new Vue(YourVue);
 
 app.$mount('#app'); // Use '$mount' function take the place of 'el' property
 ```
