@@ -37,7 +37,7 @@ new Vue({
   el: '#app',
   template: '...', // This is reason for Error 
   ...
-})
+});
 ```
 
 You should change to:
@@ -46,9 +46,10 @@ You should change to:
 import Vue from 'vue/dist/vue.esm.js';
 
 new Vue({
+  el: '#app',
   template: '...',
   ...
-})
+});
 ```
 
 __or We recommend more__:
