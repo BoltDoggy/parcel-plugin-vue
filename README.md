@@ -26,7 +26,19 @@ npm i parcel-plugin-vue -D
 * [with ts(official)](https://github.com/lc60005457/parcel-vue-demo/tree/feature/typescript)
 * [with parcel-plugin-typescript](https://github.com/lc60005457/parcel-vue-demo/tree/feature/plugin-typescript)
 
-## Make some issues clear 
+## Make some issues clear
+
+### You Should install parcel-bundler yourself
+
+The plugins for parcel-bundler need a some version of parcel-bundler at runtime.
+
+### You Should install vue / vue-template-compiler yourself
+
+You can choose the version of Vue yourself.
+
+But the version of vue-template-compiler must be eq the version of Vue.
+
+I will move the 'vue-template-compiler' to peerDependencies from devDependencies at next version.
 
 ### This Plugin only support '*.vue'
 

@@ -1,6 +1,6 @@
 {
   "name": "parcel-plugin-vue",
-  "version": "1.0.1",
+  "version": "1.1.1",
   "description": "parcel plugin for vue",
   "main": "index.js",
   "scripts": {
@@ -17,13 +17,14 @@
   },
   "homepage": "https://github.com/lc60005457/parcel-plugin-vue#readme",
   "dependencies": {
-    "parcel-bundler": "^1.1.0",
-    "vue": "^2.5.9",
+    "debug": "^3.1.0",
     "vue-hot-reload-api": "^2.2.4",
     "vueify": "^9.4.1"
   },
-  "devDependencies": {
-    "debug": "^3.1.0"
+  "peerDependencies": {
+    "parcel-bundler": "~1",
+    "vue": "~2",
+    "vue-template-compiler": "~2"
   },
   "engines": {
     "node": ">=8"
