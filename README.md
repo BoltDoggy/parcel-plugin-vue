@@ -40,6 +40,16 @@ But the version of vue-template-compiler must be eq the version of Vue.
 
 I will move the 'vue-template-compiler' to peerDependencies from devDependencies at next version.
 
+### You Should config Babel yourself
+
+Default, Vue rely on Babel so that need install 'babel-plugin-transform-runtime' and 'babel-preset-es2015'.
+
+But 'babel-preset-es2015' will be replace by 'babel-preset-env'.
+
+__So, We recommend more__:
+
+Make and edit the file '.babelrc' yourself.
+
 ### This Plugin only support '*.vue'
 
 When you meet this:
