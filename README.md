@@ -30,7 +30,7 @@ npm i parcel-plugin-vue -D
 
 ### You Should install parcel-bundler yourself
 
-The plugins for parcel-bundler need a some version of parcel-bundler at runtime.
+The plugins for parcel-bundler need a same version of parcel-bundler at runtime.
 
 ### You Should install vue / vue-template-compiler yourself
 
