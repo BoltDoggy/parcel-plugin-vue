@@ -66,7 +66,7 @@ But now, you need do it yourself, I'm sorry for this.
 
 You can make a file named 'vue.config.js', edit and save it
 
-```
+```js
 var TypeScriptAsset = require('parcel-bundler/src/assets/TypeScriptAsset.js');
 
 module.exports = {
@@ -93,7 +93,7 @@ When you meet this:
 
 Maybe in your code:
 
-```
+```js
 import Vue from 'vue';
 
 new Vue({
@@ -105,7 +105,7 @@ new Vue({
 
 You should change to:
 
-```
+```js
 import Vue from 'vue/dist/vue.esm.js';
 
 new Vue({
@@ -117,7 +117,7 @@ new Vue({
 
 __or We recommend more__:
 
-```
+```js
 import Vue from 'vue';
 import YourVue from 'YourVue.vue';
 
