@@ -5,6 +5,8 @@ const { compiler } = require('vueify');
 
 let ownDebugger = Debug('parcel-plugin-vue:MyAsset');
 
+compiler.loadConfig();
+
 function compilerPromise(fileContent, filePath) {
     return new Promise((resolve, reject) => {
         compiler.compile(fileContent, filePath, function (err, result) {
@@ -19,7 +21,6 @@ function compilerPromise(fileContent, filePath) {
 }
 
 ownDebugger('MyAsset');
-
 class MyAsset extends JSAsset {
     async parse(code) {
         ownDebugger('parse');
