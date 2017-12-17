@@ -50,6 +50,41 @@ __So, We recommend more__:
 
 Make and edit the file '.babelrc' yourself.
 
+### Custom Compilers
+
+The plugin for Vue is using built-in compiler compiles the other lang.
+
+Those compilers are:
+
+`coffee`,`babel`
+`less`,`sass`,`scss`,`stylus`
+`jade`,`pug`
+
+That will allow you to use other parcel plugins to process a part of a Vue component at next version.
+
+But now, you need do it yourself, I'm sorry for this.
+
+You can make a file named 'vue.config.js', edit and save it
+
+```
+var TypeScriptAsset = require('parcel-bundler/src/assets/TypeScriptAsset.js');
+
+module.exports = {
+    customCompilers: {
+        ts: function (content, cb, compiler, filePath) {
+            let ts = new TypeScriptAsset(filePath, {}, {});
+            ts.contents = content;
+            ts.process().then((res) => {
+                cb(null, res.js);
+            });
+        }
+    }
+};
+
+```
+
+For 'vue.config.js', you can refer to https://www.npmjs.com/package/vueify#configuring-options
+
 ### This Plugin only support '*.vue'
 
 When you meet this:
