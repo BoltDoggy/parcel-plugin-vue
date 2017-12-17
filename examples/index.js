@@ -1,3 +1,7 @@
+import Vue from 'vue';
 import Index from './index.vue';
 
-console.log(Index);
+new Vue({
+    el: '#app',
+    render: h => h(Index)
+});
