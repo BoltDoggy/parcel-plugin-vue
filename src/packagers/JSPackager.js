@@ -9,9 +9,11 @@ let ownDebugger = Debug('parcel-plugin-vue:JSPackager');
 const prelude = fs.readFileSync(__dirname + '/../builtins/prelude.js', 'utf8').trim();
 const hmr = fs.readFileSync(__dirname + '/../builtins/hmr-runtime.js', 'utf8').trim();
 
-console.log('JSPackager');
+ownDebugger('JSPackager');
 class JSPackager extends JSPackagerOfficial {
     async start() {
+        ownDebugger('start');
+
         this.first = true;
         this.dedupe = new Map;
 
@@ -19,6 +21,8 @@ class JSPackager extends JSPackagerOfficial {
     }
 
     async end() {
+        ownDebugger('end');
+
         let entry = [];
 
         // Add the HMR runtime if needed.
