@@ -83,7 +83,7 @@ module.exports = {
 
 ```
 
-For 'vue.config.js', you can refer to https://www.npmjs.com/package/vueify#configuring-options
+For 'vue.config.js', you can refer to https://github.com/vuejs/vueify#configuring-options
 
 ### This Plugin only support '*.vue'
 
