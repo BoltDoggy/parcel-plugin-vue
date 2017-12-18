@@ -19,7 +19,8 @@
   "dependencies": {
     "debug": "^3.1.0",
     "vue-hot-reload-api": "^2.2.4",
-    "vueify": "^9.4.1"
+    "vueify": "^9.4.1",
+    "vueify-bolt": "^1.0.2"
   },
   "peerDependencies": {
     "parcel-bundler": "~1",

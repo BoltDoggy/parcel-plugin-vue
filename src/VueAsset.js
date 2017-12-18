@@ -1,7 +1,7 @@
 const Debug = require('debug');
 // const { Asset } = require('parcel-bundler');
 const JSAsset = require('parcel-bundler/src/assets/JSAsset');
-const { compiler } = require('vueify');
+const { compiler } = require('vueify-bolt');
 
 let ownDebugger = Debug('parcel-plugin-vue:MyAsset');
 
