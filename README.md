@@ -22,7 +22,7 @@ npm i parcel-plugin-vue -D
 
 ## Examples
 
-* [default](https://github.com/lc60005457/parcel-plugin-vue) - Maybe you like [parcel-plugin-eslint](https://github.com/lc60005457/parcel-plugin-eslint)
+* [default](https://github.com/lc60005457/parcel-vue-demo) - Maybe you like [parcel-plugin-eslint](https://github.com/lc60005457/parcel-plugin-eslint)
 * [with ts(official)](https://github.com/lc60005457/parcel-vue-demo/tree/feature/typescript)
 * [with parcel-plugin-typescript](https://github.com/lc60005457/parcel-vue-demo/tree/feature/plugin-typescript)
 
