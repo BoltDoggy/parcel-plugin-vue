@@ -1,3 +1,3 @@
 module.exports = {
-    extractCSS: true
+    extractCSS: process.env.NODE_ENV === 'production'
 };

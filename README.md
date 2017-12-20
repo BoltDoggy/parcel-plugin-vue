@@ -50,6 +50,19 @@ __So, We recommend more__:
 
 Make and edit the file '.babelrc' yourself.
 
+### CSS Extraction
+
+You can make a file named 'vue.config.js', edit and save it
+
+```js
+module.exports = {
+    // If extractCSS is always true, the 'Hot module replacement' will not work.
+    extractCSS: process.env.NODE_ENV === 'production'
+};
+```
+
+For other attributes of 'vue.config.js', you can refer to https://github.com/vuejs/vueify#configuring-options
+
 ### Custom Compilers
 
 The plugin for Vue is using built-in compiler compiles the other lang.
@@ -80,7 +93,6 @@ module.exports = {
         }
     }
 };
-
 ```
 
 For 'vue.config.js', you can refer to https://github.com/vuejs/vueify#configuring-options
