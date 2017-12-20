@@ -1,3 +1,5 @@
+const { EventEmitter } = require('events');
+
 const Debug = require('debug');
 // const { Asset } = require('parcel-bundler');
 const JSAsset = require('parcel-bundler/src/assets/JSAsset');
@@ -5,16 +7,27 @@ const { compiler } = require('vueify-bolt');
 
 let ownDebugger = Debug('parcel-plugin-vue:MyAsset');
 
+let event = new EventEmitter();
+
 compiler.loadConfig();
 
 function compilerPromise(fileContent, filePath) {
     return new Promise((resolve, reject) => {
+        let style = '';
+        function compilerStyle(e) {
+            style = e.style;
+        }
+        compiler.on('style', compilerStyle);
         compiler.compile(fileContent, filePath, function (err, result) {
+            compiler.removeListener('style', compilerStyle);
             // result is a common js module string
             if (err) {
                 reject(err);
             } else {
-                resolve(result);
+                resolve({
+                    js: result,
+                    css: style
+                });
             }
         });
     });
@@ -22,11 +35,19 @@ function compilerPromise(fileContent, filePath) {
 
 ownDebugger('MyAsset');
 class MyAsset extends JSAsset {
+    constructor(...args) {
+        super(...args);
+        if (compiler.options.extractCSS) {
+            this.type = 'css';
+        }
+    }
+
     async parse(code) {
         ownDebugger('parse');
 
         // parse code to an AST
-        this.outputCode = await compilerPromise(this.contents, this.name);
+        this.outputAll = await compilerPromise(this.contents, this.name);
+        this.outputCode = this.outputAll.js;
         return await super.parse(this.outputCode);
     }
 
@@ -34,10 +55,15 @@ class MyAsset extends JSAsset {
         ownDebugger('collectDependencies');
 
         // analyze dependencies
-        this.addDependency('vue');
-        this.addDependency('vueify/lib/insert-css');
-        this.addDependency('vue-hot-reload-api');
         super.collectDependencies();
+    }
+
+    generate() {
+        ownDebugger('generate');
+
+        let ret = super.generate() || {};
+        ret.css = this.outputAll.css;
+        return ret;
     }
 }
 
