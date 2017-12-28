@@ -19,11 +19,14 @@ You must `node >= 8`
 ```bash
 npm i parcel-plugin-vue -D
 
-# Maybe you should do:
+# Maybe you should:
 npm i parcel-bundler -D
 
 npm i vue -S
 npm i vue-template-compiler -D # version must be eq version of vue
+
+# If no '.babelrc' file, you should
+npm i babel-plugin-transform-runtime babel-preset-es2015 -D
 ```
 
 ## Examples
@@ -33,16 +36,6 @@ npm i vue-template-compiler -D # version must be eq version of vue
 * [with parcel-plugin-typescript](https://github.com/lc60005457/parcel-vue-demo/tree/feature/plugin-typescript)
 
 ## Make some issues clear
-
-### You Should config Babel yourself
-
-Default, Vue rely on Babel so that need install 'babel-plugin-transform-runtime' and 'babel-preset-es2015'.
-
-But 'babel-preset-es2015' will be replace by 'babel-preset-env'.
-
-__So, We recommend more__:
-
-Make and edit the file '.babelrc' yourself.
 
 ### CSS Extraction
 
