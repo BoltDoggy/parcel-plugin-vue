@@ -16,8 +16,14 @@ __Make Parcel surport Vue single file components.__
 
 You must `node >= 8`
 
-```
+```bash
 npm i parcel-plugin-vue -D
+
+# Maybe you should do:
+npm i parcel-bundler -D
+
+npm i vue -S
+npm i vue-template-compiler -D # version must be eq version of vue
 ```
 
 ## Examples
@@ -27,18 +33,6 @@ npm i parcel-plugin-vue -D
 * [with parcel-plugin-typescript](https://github.com/lc60005457/parcel-vue-demo/tree/feature/plugin-typescript)
 
 ## Make some issues clear
-
-### You Should install parcel-bundler yourself
-
-The plugins for parcel-bundler need a same version of parcel-bundler at runtime.
-
-### You Should install vue / vue-template-compiler yourself
-
-You can choose the version of Vue yourself.
-
-But the version of vue-template-compiler must be eq the version of Vue.
-
-I will move the 'vue-template-compiler' to peerDependencies from devDependencies at next version.
 
 ### You Should config Babel yourself
 
