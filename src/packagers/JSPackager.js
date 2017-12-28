@@ -1,5 +1,4 @@
 const fs = require('fs');
-const path = require('path');
 
 const Debug = require('debug');
 // const { Packager } = require('parcel-bundler');
@@ -7,25 +6,8 @@ const JSPackagerOfficial = require('parcel-bundler/src/packagers/JSPackager.js')
 
 let ownDebugger = Debug('parcel-plugin-vue:JSPackager');
 
-/*
- * We're going to try to load builtin files from offical module first.
- * If there're no these files, load our owns.
- */
-const PRELDUE_FILE_IN_PARCEL_PATH = path.resolve(__dirname, '../../../parcel-bundler/src/builtins/prelude.js')
-const HMR_FILE_IN_PARCEL_PATH = path.resolve(__dirname, '../../../parcel-bundler/src/builtins/hmr-runtime.js')
-
-const builtinFilePaths = {
-    preldue: fs.existsSync(PRELDUE_FILE_IN_PARCEL_PATH)
-        ? PRELDUE_FILE_IN_PARCEL_PATH
-        : path.resolve(__dirname, '../builtins/prelude.js'),
-
-    hmr: fs.existsSync(HMR_FILE_IN_PARCEL_PATH)
-        ? HMR_FILE_IN_PARCEL_PATH
-        : path.resolve(__dirname, '../builtins/hmr-runtime.js')
-};
-
-const prelude = fs.readFileSync(builtinFilePaths.preldue, 'utf8').trim();
-const hmr = fs.readFileSync(builtinFilePaths.hmr, 'utf8').trim();
+const prelude = fs.readFileSync(__dirname + '/../builtins/prelude.js', 'utf8').trim();
+const hmr = fs.readFileSync(__dirname + '/../builtins/hmr-runtime.js', 'utf8').trim();
 
 ownDebugger('JSPackager');
 class JSPackager extends JSPackagerOfficial {

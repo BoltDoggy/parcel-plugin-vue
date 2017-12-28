@@ -10,7 +10,7 @@ require = (function (modules, cache, entry) {
   // Save the require from previous bundle to this closure if any
   var previousRequire = typeof require === "function" && require;
 
-  function newRequire(name, jumped) {
+  function newRequire(name, jumped, ModuleConfig) {
     if (!cache[name]) {
       if (!modules[name]) {
         // if we cannot find the module within our internal map or
@@ -36,7 +36,7 @@ require = (function (modules, cache, entry) {
       
       localRequire.resolve = resolve;
 
-      var module = cache[name] = new newRequire.Module;
+      var module = cache[name] = new newRequire.Module(ModuleConfig);
 
       modules[name][0].call(module.exports, localRequire, module, module.exports);
     }

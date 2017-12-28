@@ -1,6 +1,6 @@
 var global = (1, eval)('this');
 var OldModule = module.bundle.Module;
-function Module() {
+function Module(config) {
   OldModule.call(this);
   this.hot = {
     accept: function (fn) {
@@ -8,7 +8,8 @@ function Module() {
     },
     dispose: function (fn) {
       this._disposeCallback = fn;
-    }
+    },
+    data: config && config.hot
   };
 }
 
@@ -104,7 +105,9 @@ function hmrAccept(bundle, id) {
   }
 
   delete bundle.cache[id];
-  bundle(id);
+  bundle(id, undefined, {
+    hot: true
+  });
 
   cached = bundle.cache[id];
   if (cached && cached.hot && cached.hot._acceptCallback) {
