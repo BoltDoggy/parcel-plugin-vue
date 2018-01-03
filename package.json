@@ -1,6 +1,6 @@
 {
   "name": "parcel-plugin-vue",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "description": "parcel plugin for vue",
   "main": "index.js",
   "scripts": {
@@ -23,7 +23,7 @@
     "vueify-bolt": "^1.0.2"
   },
   "peerDependencies": {
-    "parcel-bundler": "~1",
+    "parcel-bundler": "^1.4.1",
     "vue": "~2",
     "vue-template-compiler": "~2"
   },
