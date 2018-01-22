@@ -1,4 +1,6 @@
-
+> When [parcel-bundler/parcel#vue](https://github.com/parcel-bundler/parcel/tree/vue) released, this plugin will be not recommended. To [parcel-bundler/parcel issues#5](https://github.com/parcel-bundler/parcel/issues/5) Watch the progress.
+>
+> But the update will be continue, you can open a feature issue for your hope.
 
 # parcel-plugin-vue [![npm](https://img.shields.io/npm/v/parcel-plugin-vue.svg)](https://www.npmjs.com/package/parcel-plugin-vue) [![david-dm](https://david-dm.org/parcel-bundler/parcel.svg)](https://david-dm.org/lc60005457/parcel-plugin-vue)
 
