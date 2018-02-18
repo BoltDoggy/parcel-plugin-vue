@@ -1,4 +1,6 @@
-
+> When [parcel-bundler/parcel#vue](https://github.com/parcel-bundler/parcel/tree/vue) released, this plugin will be not recommended. To [parcel-bundler/parcel issues#5](https://github.com/parcel-bundler/parcel/issues/5) Watch the progress.
+>
+> But the update will be continue, you can open a feature issue for your hope.
 
 # parcel-plugin-vue [![npm](https://img.shields.io/npm/v/parcel-plugin-vue.svg)](https://www.npmjs.com/package/parcel-plugin-vue) [![david-dm](https://david-dm.org/BoltDoggy/parcel-plugin-vue.svg)](https://david-dm.org/BoltDoggy/parcel-plugin-vue)
 
@@ -6,7 +8,7 @@
 
 <img src="https://img.souche.com/f2e/b1f71b545619350ff92458bbcfa01056.png" align="right" width="140">
 
-__Make Parcel surport Vue single file components.__
+__Make Parcel support Vue single file components.__
 
 [【What's the Parcel】](https://parceljs.org/)[【What's the Vue】](https://vuejs.org/)[【What's the Vue single file components】](https://vuejs.org/v2/guide/single-file-components.html)
 
