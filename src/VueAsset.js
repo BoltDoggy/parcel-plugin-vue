@@ -58,10 +58,10 @@ class MyAsset extends JSAsset {
         super.collectDependencies();
     }
 
-    generate() {
+    async generate() {
         ownDebugger('generate');
 
-        let ret = super.generate() || {};
+        let ret = await super.generate() || {};
         ret.css = this.outputAll.css;
         return ret;
     }
