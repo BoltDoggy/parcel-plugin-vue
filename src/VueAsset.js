@@ -4,6 +4,7 @@ const Debug = require('debug');
 // const { Asset } = require('parcel-bundler');
 const JSAsset = require('parcel-bundler/src/assets/JSAsset');
 const { compiler } = require('vueify-bolt');
+const Vue = require('vue');
 
 let ownDebugger = Debug('parcel-plugin-vue:MyAsset');
 
@@ -14,10 +15,17 @@ compiler.loadConfig();
 function compilerPromise(fileContent, filePath) {
     return new Promise((resolve, reject) => {
         let style = '';
+        let dependencies = [];
         function compilerStyle(e) {
             style = e.style;
         }
+        function addDependency(srcPath) {
+            if (dependencies.indexOf(srcPath) === -1) {
+                dependencies.push(srcPath);
+            }
+        }
         compiler.on('style', compilerStyle);
+        compiler.on('dependency', addDependency)
         compiler.compile(fileContent, filePath, function (err, result) {
             compiler.removeListener('style', compilerStyle);
             // result is a common js module string
@@ -26,7 +34,8 @@ function compilerPromise(fileContent, filePath) {
             } else {
                 resolve({
                     js: result,
-                    css: style
+                    css: style,
+                    dependencies
                 });
             }
         });
@@ -53,6 +62,10 @@ class MyAsset extends JSAsset {
 
     collectDependencies() {
         ownDebugger('collectDependencies');
+
+        for (let dep of this.outputAll.dependencies) {
+            this.addDependency(dep, {includedInParent: true});
+        }
 
         // analyze dependencies
         super.collectDependencies();
