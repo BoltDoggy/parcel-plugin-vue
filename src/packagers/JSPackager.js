@@ -38,9 +38,11 @@ class JSPackager extends JSPackagerOfficial {
 
         // Add the HMR runtime if needed.
         if (this.options.hmr) {
-            // Asset ids normally start at 1, so this should be safe.
-            await this.writeModule(0, hmr.replace('{{HMR_PORT}}', this.options.hmrPort));
-            entry.push(0);
+            let asset = await this.bundler.getAsset(
+                require.resolve('../builtins/hmr-runtime')
+            );
+            await this.addAssetToBundle(asset);
+            entry.push(asset.id);
         }
 
         if (await this.writeBundleLoaders()) {
