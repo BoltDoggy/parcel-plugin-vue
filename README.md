@@ -1,3 +1,5 @@
+> parcel-bundler/parcel: [#1052 is now merged, and will be released as part of v1.7.0 later this week! 🎉](https://github.com/parcel-bundler/parcel/issues/5#issuecomment-376755952) (2018年3月28日)
+>
 > When [parcel-bundler/parcel#vue](https://github.com/parcel-bundler/parcel/tree/vue) released, this plugin will be not recommended. To [parcel-bundler/parcel issues#5](https://github.com/parcel-bundler/parcel/issues/5) Watch the progress.
 >
 > But the update will be continue, you can open a feature issue for your hope.
