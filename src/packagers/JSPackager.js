@@ -36,8 +36,8 @@ class JSPackager extends JSPackagerOfficial {
         if (this.bundle.entryAsset) {
             entry.push(this.bundle.entryAsset.id);
         }
-
-        await this.dest.end('},{},' + JSON.stringify(entry) + ')');
+        const mapName = this.bundle.entryAsset.generateBundleName().replace('.js','')
+        await this.dest.end('},{},' + JSON.stringify(entry) + `)\n//# sourceMappingURL=/dist/${mapName}.map`);
     }
 }
 
