@@ -1,8 +1,6 @@
-> parcel-bundler/parcel: [#1052 is now merged, and will be released as part of v1.7.0 later this week! 🎉](https://github.com/parcel-bundler/parcel/issues/5#issuecomment-376755952) (2018年3月28日)
+> ❗️❗️❗️parcel-bundler/parcel @1.7.0 support Vue Now ❗️❗️❗️
 >
-> When [parcel-bundler/parcel#vue](https://github.com/parcel-bundler/parcel/tree/vue) released, this plugin will be not recommended. To [parcel-bundler/parcel issues#5](https://github.com/parcel-bundler/parcel/issues/5) Watch the progress.
->
-> But the update will be continue, you can open a feature issue for your hope.
+> But the update of here will be continue, you can open a feature issue for your hope.
 
 # parcel-plugin-vue [![npm](https://img.shields.io/npm/v/parcel-plugin-vue.svg)](https://www.npmjs.com/package/parcel-plugin-vue) [![david-dm](https://david-dm.org/BoltDoggy/parcel-plugin-vue.svg)](https://david-dm.org/BoltDoggy/parcel-plugin-vue)
 
