@@ -1,6 +1,8 @@
 > ❗️❗️❗️parcel-bundler/parcel @1.7.0 support Vue Now ❗️❗️❗️
 >
-> But the update of here will be continue, you can open a feature issue for your hope.
+> This plugin will be not recommended.
+>
+> Maybe I will be forgotten, but I will be continue.
 
 # parcel-plugin-vue [![npm](https://img.shields.io/npm/v/parcel-plugin-vue.svg)](https://www.npmjs.com/package/parcel-plugin-vue) [![david-dm](https://david-dm.org/BoltDoggy/parcel-plugin-vue.svg)](https://david-dm.org/BoltDoggy/parcel-plugin-vue)
 
