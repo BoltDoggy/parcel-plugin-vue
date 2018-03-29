@@ -128,6 +128,6 @@ import YourVue from 'YourVue.vue';
 
 const app = new Vue({
   el: '#app',
-  render: h => h(Index)
+  render: h => h(YourVue)
 });
 ```
