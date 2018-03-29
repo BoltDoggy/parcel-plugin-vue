@@ -1,8 +1,10 @@
 > ❗️❗️❗️parcel-bundler/parcel @1.7.0 support Vue Now ❗️❗️❗️
 >
-> This plugin will be not recommended.
+> ⚠️ This plugin will be not recommended ⚠️.
 >
 > Maybe I will be forgotten, but I will be continue.
+>
+> Nice to meet you at [parcel-plugin-eslint](https://github.com/BoltDoggy/parcel-plugin-eslint).
 
 # parcel-plugin-vue [![npm](https://img.shields.io/npm/v/parcel-plugin-vue.svg)](https://www.npmjs.com/package/parcel-plugin-vue) [![david-dm](https://david-dm.org/BoltDoggy/parcel-plugin-vue.svg)](https://david-dm.org/BoltDoggy/parcel-plugin-vue)
 
@@ -35,9 +37,9 @@ npm i babel-plugin-transform-runtime babel-preset-es2015 -D
 
 ## Examples
 
-* [default](https://github.com/lc60005457/parcel-vue-demo) - Maybe you like [parcel-plugin-eslint](https://github.com/lc60005457/parcel-plugin-eslint)
-* [with ts(official)](https://github.com/lc60005457/parcel-vue-demo/tree/feature/typescript)
-* [with parcel-plugin-typescript](https://github.com/lc60005457/parcel-vue-demo/tree/feature/plugin-typescript)
+* [default](https://github.com/BoltDoggy/parcel-vue-demo) - Maybe you like [parcel-plugin-eslint](https://github.com/BoltDoggy/parcel-plugin-eslint)
+* [with ts(official)](https://github.com/BoltDoggy/parcel-vue-demo/tree/feature/typescript)
+* [with parcel-plugin-typescript](https://github.com/BoltDoggy/parcel-vue-demo/tree/feature/plugin-typescript)
 
 ## Make some issues clear
 
