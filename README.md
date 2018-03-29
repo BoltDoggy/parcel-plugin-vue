@@ -1,6 +1,6 @@
 > ❗️❗️❗️parcel-bundler/parcel @1.7.0 support Vue Now ❗️❗️❗️
 >
-> ⚠️ This plugin will be not recommended ⚠️.
+> ⚠️ This plugin will be not recommended.
 >
 > Maybe I will be forgotten, but I will be continue.
 >
